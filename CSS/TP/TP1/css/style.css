@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --ff-sans: Open Sans;
+  --fs-900: 60px;
+  --fs-800: 48px;
+  --fs-700: 27px;
+  --fs-600: 24px;
+  --fs-400: 18px;
+  --fw-400: 400;
+  --fw-700: 700;
+  --size-8: 8px;
+  --size-20: 20px;
+  --size-36: 36px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(220, 17%, 20%);
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+:root {
+  --color-neutral-100: #fff;
+  --color-neutral-900: #1f3049;
+  --color-primary-400: #0066ff;
+}
+
+.pricing-plan__cta-button {
+  text-decoration: none;
+  background-color: #0066ff;
+  color: #fff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px;
+}
+.pricing-plan__cta-button:hover {
+  background-color: #fff;
+  color: #0066ff;
+}
+
+body {
+  font: "Open Sans";
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+.pricing-title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 36px;
+}
+
+.pricing-plan {
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border: 8px solid #0066ff;
+  padding: 36px;
+}
+.pricing-plan :not(:first-child)::before {
+  content: "";
+  display: block;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #1f3049;
+  top: -10px;
+}
+.pricing-plan__title {
+  color: #0066ff;
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.pricing-plan__feature {
+  position: relative;
+  list-style-type: none;
+  color: #1f3049;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.pricing-plan__feature strong {
+  display: none;
+}
+.pricing-plan__price {
+  font-size: 48px;
+  font-weight: 700;
+  padding-bottom: 36px;
+}
+.pricing-plan__price span {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+/*NESTING*/
+
+/*# sourceMappingURL=style.css.map */

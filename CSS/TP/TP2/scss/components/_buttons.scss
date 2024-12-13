@@ -1,0 +1,14 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typo" as *;
+
+.circle__btn{
+    padding: 5rem 3rem;
+    background-color: map-get($colors, white);
+    color: map-get($colors, dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: map-get($ff, sans-normal);
+    font-size: map-get(map-get($fs, S), 700);
+    font-weight: map-get($fw, 400);
+    border-radius: 50%;
+}

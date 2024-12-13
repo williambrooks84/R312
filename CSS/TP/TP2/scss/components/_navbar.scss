@@ -1,0 +1,104 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typo" as *;
+@use "../abstracts/mixin" as *;
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  font-style: map-get($ff, sans-normal);
+  color: map-get($colors, white);
+  backdrop-filter: blur(10px);
+}
+
+.menu__icon {
+  display: none;
+}
+
+.menu__toggle {
+  display: none;
+}
+
+.menu__logo {
+  padding-right: 1rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  //padding: 1rem;
+  position: relative;
+  width: 90%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    background-color: map-get($colors, light);
+  }
+
+  li {
+    list-style: none;
+    font-family: map-get($ff, sans-normal);
+    padding: 1rem 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  li:hover {
+    border-bottom: 0.125rem solid map-get($colors, white);
+  }
+
+  span {
+    font-weight: map-get($fw, 700);
+    padding-right: 0.75rem;
+  }
+}
+
+@include respond-to(tablet) {
+  .menu {
+    background-color: map-get($colors, dark);
+    backdrop-filter: none;
+  }
+
+  .menu__list {
+    &::before {
+      content: none;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .menu {
+    justify-content: space-between;
+  }
+
+  .menu__icon {
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .menu__toggle:checked ~ .menu__list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    background-color: map-get($colors, dark);
+    width: fit-content;
+    right: 0;
+  }
+}

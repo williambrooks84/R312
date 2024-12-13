@@ -1,0 +1,17 @@
+@use "../base/colors" as *;
+@use "../base/typo" as *;
+
+.pricing-plan__cta-button{
+    text-decoration: none;
+    background-color: map-get(map-get($colors, primary), 400);
+    color: map-get(map-get($colors, neutral), 100);
+    border-radius: map-get($size , 8 );
+    text-transform: uppercase;
+    font-weight: map-get($fw, 700);
+    padding: map-get($size, 20);
+
+    &:hover{
+        background-color: map-get(map-get($colors, neutral), 100);
+        color: map-get(map-get($colors, primary), 400);
+    }
+}

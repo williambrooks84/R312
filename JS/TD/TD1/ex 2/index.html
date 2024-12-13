@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let section = document.createElement("section");
+       section.style="background-color: darkcyan;width:300px;padding:3%";
+       document.body.append(section);
+
+       let div1 = document.createElement("div");
+       div1.style="background-color:darkseagreen;width:100px;padding:2%";
+       section.appendChild(div1);
+       let p1 = document.createElement("p");
+       p1 = document.createTextNode("Lorem Ipsum Dolor");
+       div1.appendChild(p1);
+
+       let div2 = document.createElement("div");
+       div2.style="background-color:burlywood;width:100px;padding:2%";
+       section.appendChild(div2);
+       let p2 = document.createElement("p");
+       p2 = document.createTextNode("sit amet consectetur");
+       div2.appendChild(p2);
+    </script>
+</body>
+</html>

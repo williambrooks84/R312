@@ -1,0 +1,77 @@
+@use "../base/colors" as *;
+@use "../base/typo" as *;
+
+body {
+    background-color: map-get(map-get($colors, neutral), 800);
+    font: map-get($ff, sans);
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+.pricing-title{
+    color: map-get(map-get($colors, neutral), 100);
+    font-size: map-get($fs, 800);
+    font-weight: map-get($fw, 400);
+    text-transform: capitalize;
+    padding: map-get($size, 36);
+}
+
+.pricing-plan{
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background-color: map-get(map-get($colors, neutral), 100);
+    border: map-get($size, 8) solid map-get(map-get($colors, primary), 400);
+    padding: map-get($size, 36);
+
+    :not(:first-child)::before {
+        content: "";
+        display: block;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: map-get($colors, neutral,900);
+        top: -10px; 
+    }
+
+    &__title{
+        color: map-get(map-get($colors, primary), 400);
+        font-size: map-get($fs, 700);
+        font-weight: map-get($fw, 700);
+        text-transform: uppercase;
+        padding-bottom: map-get($size, 20);
+    }
+
+
+    &__feature{
+        position: relative;
+        list-style-type: none;
+        color: map-get(map-get($colors, neutral), 900);
+        font-size: map-get($fs, 400);
+        padding-bottom: map-get($size, 20);
+        strong{
+            display: none;
+        }
+    }
+
+    &__price{
+        font-size: map-get($fs, 800);
+        font-weight: map-get($fw, 700);
+        padding-bottom: map-get($size, 36);
+
+        span{
+            font-size: map-get($fs, 700);
+            font-weight: map-get($fw, 400);
+        }
+    }
+    
+}
+
+.dark .pricing-plan {
+    background-color: map-get(map-get($darkcolors, neutral), 100);
+}

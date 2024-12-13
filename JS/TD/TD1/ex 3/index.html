@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 3</title>
+</head>
+<body>
+    <script>
+        //a)
+        let randomColor = function(){
+            let r = Math.floor(Math.random()*256)
+            let g = Math.floor(Math.random()*256)
+            let b = Math.floor(Math.random()*256)
+            //let color = "rgb(" + r + "," + g + "," + b + ")";
+            let color = `rgb(${r}, ${g}, ${b})`;
+            return color; 
+        }
+
+        //b)
+
+        //dim="24px", pad="3px" valeurs par défaut prises en compte si on ne saisit pas les dimensions
+        
+        let createSquare = function(dim="24px", pad="3px"){
+            let div = document.createElement("div");
+            div.style.backgroundColor = randomColor();
+            div.style.width = dim;
+            div.style.height = dim;
+            div.style.padding = pad;
+            div.style.display = "inline-block";
+            return div;
+        }
+
+        // let section = document.createElement("section");
+        // document.body.append(section);
+
+        // let div = document.createElement("div");
+        // section.appendChild(div1);
+
+        //c)
+
+        let multiSquares = function(nb){
+            for (let i=0; i<nb; i++){
+                let d = createSquare("24px", "3px");
+                document.body.append(d);
+            }
+        }
+
+        //d)
+
+        let imbricateSquares = function(nb){
+            let parent = document.body;
+            for (let i=0; i<nb; i++){
+                let d= createSquare("auto", "3px");
+                parent.append(d);
+                parent = d;
+            }
+        }
+
+        //e)
+
+        let changeColor = function(){
+            let alldiv = document.querySelectorAll("div");
+            for (let div of alldiv){
+                div.style.backgroundColor = randomColor();
+            }
+        }
+
+        //f)
+        setInterval(changeColor, 100);
+
+
+    </script>
+</body>
+</html>

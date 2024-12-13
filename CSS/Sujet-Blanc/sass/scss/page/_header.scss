@@ -1,0 +1,12 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typo" as *;
+
+.header__title{
+    color: map-get($colors, black);
+    font-weight: map-get($fw, 800);
+}
+
+.header__description{
+    color: map-get($colors, grey);
+    font-weight: map-get($fw, 400);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Javascript</span> 
+    
+    <br>
+
+    <!-- <a id="lien1" href="https://www.sncf-connect.com/en-en/">SNCF</a> 
+
+    <br>
+    
+    <a id="lien2" href="https://www.ouigo.com/?&gad_source=1&gclid=CjwKCAjw59q2BhBOEiwAKc0ijSRKAR9qtuBxB2dBOi2pT_Vx7muzMmARPDhD9QxQbNyhA8-6U4K5AxoCeqEQAvD_BwE&gclsrc=aw.ds">Ouigo</a> -->
+
+    <a href="https://www.sncf-connect.com/en-en/">SNCF</a> 
+
+    <br>
+    
+    <a href="https://www.ouigo.com/?&gad_source=1&gclid=CjwKCAjw59q2BhBOEiwAKc0ijSRKAR9qtuBxB2dBOi2pT_Vx7muzMmARPDhD9QxQbNyhA8-6U4K5AxoCeqEQAvD_BwE&gclsrc=aw.ds">Ouigo</a>
+
+    <br>
+
+    <a href="https://www.blablacar.com">BlaBlaCar</a>
+
+    <br>
+
+    <a href="https://www.flixbus.fr">Flixbus</a>
+    
+    <script>
+        let elt = document.querySelector("span");
+        elt.textContent = elt.textContent + " c'est très bien";
+
+        //Alterner 2 liens
+
+        // let sncf = document.querySelector("#lien1");
+        // let ouigo = document.querySelector("#lien2");
+        // let tmp = sncf.href;
+        // sncf.href = ouigo.href;
+        // ouigo.href = tmp;
+
+        //aléatoirement changer les liens
+
+        let all = document.querySelectorAll("a");
+        for (let i=0; i<all.length; i++){
+
+            let pos1 = Math.floor( Math.random() * all.length);
+            let pos2 = Math.floor( Math.random() * all.length);
+
+            let lien1 = all[pos1];
+            let lien2 = all[pos2];
+
+            let tmp = lien1.href;
+            lien1.href = lien2.href;
+            lien2.href = tmp;
+        }
+
+        //Supprimer les liens
+
+        for (let i=0; i<all.length; i++){
+            let lien = all[i];
+            lien.remove();
+        }    
+        
+    </script>
+</body>
+</html>

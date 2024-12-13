@@ -1,0 +1,15 @@
+$colors: (
+    black: hsla(0, 0%, 0%, 0.847),
+    white: hsla(0, 0%, 100%, 0.847),
+    grey: hsla(0, 0%, 55%, 0.847),
+    light-grey: hsla(0, 2%, 89%, 0.847),
+    turquoise: hsla(184, 100%, 20%, 0.847),
+    light-turquoise: hsla(184, 100%, 84%, 0.847),
+
+);
+
+:root {
+    @each $key, $value in $colors {
+        --color-#{$key}: #{$value};
+    }
+}

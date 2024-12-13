@@ -1,0 +1,39 @@
+Tailwind CSS IntelliSense
+
+
+npm run sass:w
+
+bases : 
+_reset.scss
+_root.scss
+_typo.scss
+_index.scss
+
+abstracts:
+_colors.scss
+_space.scss
+_typo.scss
+_mixin.scss
+_index.scss
+
+components:
+_navbar.scss
+_buttons.scss
+_typo.scss
+
+
+~~
+ npm install sass --D
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+npm init -y
+
+npx tailwindcss -i ./src/input.css -o ./src/output.css --Watch
+
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+npm install bootstrap@5.3.3
+
+npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch

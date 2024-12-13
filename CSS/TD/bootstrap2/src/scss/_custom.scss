@@ -1,0 +1,32 @@
+$blue: rgb(25, 54, 86);
+$green: rgb(152, 171, 29);
+
+$primary: $green;
+
+//OPTION 1 IMPORTATION DANS L'ENSEMBLE DES CLASSES BOOTSTRAP
+@use "../../node_modules/bootstrap/scss/bootstrap";
+
+//OPTION 2 IMPORTATION D'UNE PARTIE DES CLASSES BOOTSTRAP
+
+/*
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/images";
+
+//Importation des éléments de base de Bootstrap
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/containers";
+
+//importation des composants de Bootstrap
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/card";
+*/
+

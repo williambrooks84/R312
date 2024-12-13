@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/output.css" />
+  <title>Space tourism website</title>
+</head>
+
+<body class="bg-black text-white p-32">
+  <section class="menu flex flex-row">
+    <img class="menu__logo" src="./assets/shared/logo.svg" alt="logo" />
+    <ul class="menu__list flex flex-row">
+      <li class="menu__list-item pr-3"><span class="font-bold">00 </span> Home</li>
+      <li class="menu__list-item pr-3"><span class="font-bold">01 </span> Destination</li>
+      <li class="menu__list-item pr-3"><span class="font-bold">02 </span> Crew</li>
+      <li class="menu__list-item pr-3"><span class="font-bold">03 </span> Technology</li>
+    </ul>
+  </section>
+
+  <section class="destination flex">
+    <div class="destination__cover flex-col w-1/2">
+      <p class="destination__cover-title text-center"><span>01 </span>Pick your destination</p>
+      <img class="destination__cover-img" src="./assets/destination/image-moon.png" alt="moon" />
+    </div>
+    <div class="destination__body w-1/2">
+      <div class="destination__body-menu">
+        <ul class="destination__body-menu-list flex flex-row">
+          <li class="destination__body-menu-list-item pr-3">Moon</li>
+          <li class="destination__body-menu-list-item pr-3">Mars</li>
+          <li class="destination__body-menu-list-item pr-3">Europe</li>
+          <li class="destination__body-menu-list-item pr-3">Titan</li>
+        </ul>
+      </div>
+
+      <div class="destination__description flex-col">
+        <p class="destination__description-title text-M-800 font-400 font-serif">Moon</p>
+        <p class="destination__description-paragraph text-light text-S-600 font-sans-normal">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11 landing
+          sites.
+        </p>
+        <div class="destination__description-distances">
+          <div class="destination__description-distances-avg>">
+            <p class="destination__description-distances-avg-title">Avg. distance</p>
+            <p class="destination__description-distances-avg-value">384,400 km</p>
+          </div>
+          <div class="destination__description-distances-est">
+            <p class="destination__description-distances-est-title">Est. travel time</p>
+            <p class="destination__description-distances-est-value">3 days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

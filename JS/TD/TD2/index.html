@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 3</title>
+  </head>
+  <body>
+    <script>
+      //a)
+      let randomColor = function () {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        //let color = "rgb(" + r + "," + g + "," + b + ")";
+        let color = `rgb(${r}, ${g}, ${b})`;
+        return color;
+      };
+
+      //b)
+
+      //dim="24px", pad="3px" valeurs par défaut prises en compte si on ne saisit pas les dimensions
+
+      let createSquare = function (dim = "24px", pad = "3px") {
+        let div = document.createElement("div");
+        div.style.backgroundColor = randomColor();
+        div.style.width = dim;
+        div.style.height = dim;
+        div.style.padding = pad;
+        div.style.display = "inline-block";
+        return div;
+      };
+
+      // let section = document.createElement("section");
+      // document.body.append(section);
+
+      // let div = document.createElement("div");
+      // section.appendChild(div1);
+
+      //c)
+
+      let multiSquares = function (nb) {
+        for (let i = 0; i < nb; i++) {
+          let d = createSquare("24px", "3px");
+          document.body.append(d);
+        }
+      };
+
+      //d)
+
+      let imbricateSquares = function (nb) {
+        let parent = document.body;
+        for (let i = 0; i < nb; i++) {
+          let d = createSquare("auto", "3px");
+          parent.append(d);
+          parent = d;
+        }
+      };
+
+      //e)
+
+      let changeColor = function () {
+        let alldiv = document.querySelectorAll("div");
+        for (let div of alldiv) {
+          div.style.backgroundColor = randomColor();
+        }
+      };
+
+      //f)
+      //setInterval(changeColor, 100);
+
+      //TD2
+      //a)
+      //   multiSquares(100);
+
+      //   let handler_changeColor = function (ev) {
+      //     //console.dir(ev);
+      //     ev.target.style.backgroundColor = randomColor();
+      //   };
+
+      //   let alldivs = document.querySelectorAll("div");
+
+      //   for (let d of alldivs) {
+      //     d.addEventListener("click", handler_changeColor);
+      //   }
+
+      //b)
+      //multiSquares(100);
+
+      let handler_changeColor = function (ev) {
+        //console.dir(ev);
+        ev.target.style.backgroundColor = randomColor();
+      };
+      document.body.addEventListener("click", handler_changeColor);
+
+      //c) et d)
+      /*
+      imbricateSquares(100);
+
+      let handler_growPadding = function (ev) {
+        //console.dir(ev.currentTarget.id); //currentTarget = id de l'élément qu'on a cliqué ( d) )
+        
+        //SOLUTION 1
+        // if (ev.target == ev.currentTarget){
+        //     let pad = parseFloat(ev.currentTarget.style.padding) + 3;
+        //     ev.currentTarget.style.padding = pad + 'px';
+        // }
+
+        //SOLUTION 2
+        let pad = parseInt(ev.currentTarget.style.padding) + 3;
+        ev.currentTarget.style.padding = pad + "px";
+        ev.stopPropoagation(); //stop la propagation (buggling) de l'événement
+      };
+
+      let alldivs = document.querySelectorAll("div");
+
+      for (let d of alldivs) {
+        d.addEventListener("click", handler_growPadding);
+      }*/
+
+      //e)
+      let count = 3;
+      imbricateSquares(100);
+
+      let handler_growPadding = function (ev) {
+        count++;
+        ev.currentTarget.style.padding = count + "px";
+      };
+
+      let alldivs = document.querySelectorAll("div");
+      for (let d of alldivs) {
+        // d.addEventListener("click", handler_growPadding);
+        d.addEventListener("click", handler_growPadding, true); //true indique de réagir en phase de capture
+      }
+
+      //f)
+
+
+    </script>
+  </body>
+</html>

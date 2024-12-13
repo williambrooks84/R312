@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        /*Tokens*/
+        --clr-black: 0 0% 100%;
+        --clr-blue: 226 70% 40%;
+        --clr-red: 0 100% 50%;
+        --clr-green: 140 100% 30%;
+        --clr-white: 0 0% 100%;
+
+        /*Contextualisation*/
+        --clr-bg: var(--clr-blue);
+        --clr-text: var(--clr-white);
+    }
+
+    .theme-red{
+        --clr-bg: var(--clr-red);
+        --clr-text: var(--clr-black);
+    }
+
+    .theme-green{
+        --clr-bg: var(--clr-green);
+        --clr-text: var(--clr-black);
+    }
+}

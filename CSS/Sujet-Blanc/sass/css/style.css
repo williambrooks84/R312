@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --color-black: hsla(0, 0%, 0%, 0.847);
+  --color-white: hsla(0, 0%, 100%, 0.847);
+  --color-grey: hsla(0, 0%, 55%, 0.847);
+  --color-light-grey: hsla(0, 2%, 89%, 0.847);
+  --color-turquoise: hsla(184, 100%, 20%, 0.847);
+  --color-light-turquoise: hsla(184, 100%, 84%, 0.847);
+}
+
+:root {
+  --ff-sans: Open Sans;
+  --ff-serif: Bellefair;
+  --ff-sans-cond: Barlow Condensed;
+  --ff-sans-normal: Barlow;
+  --fs-S-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-S-800: 3.5rem;
+  --fs-S-700: 1.5rem;
+  --fs-S-600: 1rem;
+  --fs-S-500: 1rem;
+  --fs-S-400: 0.9375rem;
+  --fs-S-300: 1rem;
+  --fs-S-200: 0.875rem;
+  --fs-M-800: 6.25rem;
+  --fs-M-700: 3.5rem;
+  --fs-M-600: 2rem;
+  --fs-M-500: 1.75rem;
+  --fs-M-400: 1.125rem;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.card {
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 100%;
+  font-weight: 400;
+  border: 2px hsla(0, 0%, 55%, 0.847) solid;
+  border-radius: 0.5rem;
+}
+.card__title {
+  color: hsla(0, 0%, 0%, 0.847);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.card__description {
+  color: hsla(0, 0%, 55%, 0.847);
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 2%, 89%, 0.847);
+  color: hsla(0, 0%, 55%, 0.847);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+.card__price span {
+  color: hsla(0, 0%, 0%, 0.847);
+  font-size: 3.5rem;
+  font-weight: 800;
+  padding: 0 0.5rem;
+}
+.card__list {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 5rem;
+  margin: 0;
+}
+.card__list-item {
+  padding: 1rem;
+  color: hsla(0, 0%, 0%, 0.847);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+}
+.btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 0rem;
+  width: calc(100% - 2rem);
+  background-color: hsla(184, 100%, 84%, 0.847);
+  color: hsla(184, 100%, 20%, 0.847);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  /*&-dark{
+      background-color: map-get($colors, turquoise);
+      color: map-get($colors, white);
+  }*/
+}
+
+.btn-dark {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 0rem;
+  width: calc(100% - 2rem);
+  background-color: hsla(184, 100%, 84%, 0.847);
+  color: hsla(184, 100%, 20%, 0.847);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: hsla(184, 100%, 20%, 0.847);
+  color: hsla(0, 0%, 100%, 0.847);
+}
+
+.header__title {
+  color: hsla(0, 0%, 0%, 0.847);
+  font-weight: 800;
+}
+
+.header__description {
+  color: hsla(0, 0%, 55%, 0.847);
+  font-weight: 400;
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+.header {
+  padding-bottom: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+}
+/*NESTING*/
+
+/*# sourceMappingURL=style.css.map */

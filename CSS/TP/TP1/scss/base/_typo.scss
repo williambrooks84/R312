@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+$ff:(
+    sans: "Open Sans"
+);
+
+$fs:(
+    900: 60px,
+    800: 48px,
+    700: 27px,
+    600: 24px,
+    400: 18px
+);
+
+$fw:(
+    400: 400,
+    700: 700
+);
+
+$size:(
+    8: 8px,
+    20: 20px,
+    36: 36px
+);
+
+:root {
+    @each $name, $family in $ff {
+        --ff-#{$name}: #{$family};
+    }
+
+    @each $key, $size in $fs {
+        --fs-#{$key}: #{$size};
+    }
+
+    @each $weight, $value in $fw {
+        --fw-#{$weight}: #{$value};
+    }
+
+    @each $key, $value in $size {
+        --size-#{$key}: #{$value};
+    }
+}

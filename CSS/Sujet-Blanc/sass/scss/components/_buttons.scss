@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typo" as *;
+
+.btn{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 0rem;
+    width: calc(100% - 2rem);
+    background-color: map-get($colors, light-turquoise);
+    color: map-get($colors, turquoise);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: map-get($fw, 700);
+    text-decoration: none;
+    
+    /*&-dark{
+        background-color: map-get($colors, turquoise);
+        color: map-get($colors, white);
+    }*/
+}
+
+.btn-dark{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 0rem;
+    width: calc(100% - 2rem);
+    background-color: map-get($colors, light-turquoise);
+    color: map-get($colors, turquoise);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: map-get($fw, 700);
+    text-decoration: none;
+    background-color: map-get($colors, turquoise);
+    color: map-get($colors, white);
+}

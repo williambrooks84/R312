@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+
+$ff: (
+    sans: "Open Sans",
+    serif: "Bellefair",
+    sans-cond: "Barlow Condensed", 
+    sans-normal: "Barlow"
+);
+
+$fs: (
+    S: (
+        900: clamp(5rem, 8vw + 1rem, 9.375rem),
+        800: 3.5rem,
+        700: 1.5rem,
+        600: 1rem,
+        500: 1rem,
+        400: 0.9375rem,
+        300: 1rem,
+        200: 0.875rem
+    ),
+    M: (
+        800: 6.25rem,
+        700: 3.5rem,
+        600: 2rem,
+        500: 1.75rem,
+        400: 1.125rem
+    )
+);
+
+$fw: (
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+    900: 900,
+);
+
+:root {
+    @each $name, $family in $ff {
+        --ff-#{$name}: #{$family};
+    }
+
+    @each $key, $sizes in $fs {
+        @each $size-key, $size-value in $sizes {
+            --fs-#{$key}-#{$size-key}: #{$size-value};
+        }
+    }
+
+    @each $weight, $value in $fw {
+        --fw-#{$weight}: #{$value};
+    }
+}

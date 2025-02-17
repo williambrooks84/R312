@@ -12,7 +12,7 @@ Ce dépôt contient les exercices réalisés pour se familiariser avec l'utilisa
 ### SASS
 1. Installez **SASS** en tant que dépendance de développement :
     ```bash
-    npm install sass --save-dev
+    npm install sass
     ```
 
 2. Pour compiler le fichier SASS, utilisez la commande suivante :
@@ -23,7 +23,7 @@ Ce dépôt contient les exercices réalisés pour se familiariser avec l'utilisa
 ### Tailwind CSS
 1. Installez **Tailwind CSS** en tant que dépendance de développement :
     ```bash
-    npm install --save-dev tailwindcss
+    npm install tailwindcss
     ```
 
 2. Pour générer le fichier CSS final, exécutez la commande suivante :
